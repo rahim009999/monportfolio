@@ -1,0 +1,182 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header with navigation */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center; /* Centering the navigation items */
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Heading for each section */
+h2 {
+    font-size: 36px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* General section layout */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* About section with photo and text */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.about-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    object-fit: cover;
+}
+
+.about-text p {
+    max-width: 600px;
+    font-size: 18px;
+    color: #555;
+    text-align: left;
+}
+
+/* Services Section */
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.service {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.service h3 {
+    margin-top: 15px;
+    font-size: 24px;
+    color: #333;
+}
+
+.service p {
+    font-size: 16px;
+    color: #777;
+    margin-top: 10px;
+}
+
+.service:hover {
+    transform: scale(1.05);
+}
+
+/* Portfolio Section */
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.portfolio-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+/* Footer section */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .services-container, .portfolio-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service, .portfolio-item {
+        width: 100%;
+        max-width: 500px;
+    }
+}
